@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# displays Best School 10 times,9th line has hi on new line, use while and if
+
+x=0
+
+while [ $x -lt 11 ]
+do
+	if [ $x -eq 9 ]
+	then
+		echo Hi
+	else
+		echo Best School
+	fi
+	x=$(( x + 1 ))
+done

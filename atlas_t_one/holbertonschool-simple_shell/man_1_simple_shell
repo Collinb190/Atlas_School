@@ -1,0 +1,43 @@
+.TH HOLBERTON_SHELL 1 "December 2023" "1.0" "Holberton Shell Manual"
+.SH NAME
+Holberton Shell \- A simple UNIX command line interpreter.
+
+.SH SYNOPSIS
+.B holberton_shell
+
+.SH DESCRIPTION
+The
+.B holberton_shell
+is a simple UNIX command line interpreter developed as a Holberton School project. It allows users to enter commands and executes them.
+
+.SH OPTIONS
+The
+.B holberton_shell
+does not take any options. However, you can supply a command.
+
+.SH COMMANDS
+.TP
+.B exit
+Exits the shell.
+
+.TP
+.B env
+Prints the current environment.
+
+.SH INTERACTIVE MODE
+In interactive mode, the shell displays a prompt (#cisfun$) and waits for the user to enter a command. It will display the prompt again after executing a command.
+
+.SH COMMAND LINES
+Command lines are simple and do not support semicolons, pipes, redirections, or other advanced features. If an executable is not found, an error message is displayed.
+
+.SH HANDLING ERRORS
+The shell handles errors gracefully and provides meaningful error messages.
+
+.SH END OF FILE CONDITION
+The shell handles the end-of-file condition (Ctrl+D) appropriately.
+
+.SH BUGS
+There is a known issue related to the exit command when combined with invalid commands. For example, entering "qwerty exit" does not exit the shell with the correct status and instead displays an error message ("qwerty: not found") and returns to the prompt. The expected behavior would be to exit with a status of 127. Developers are actively working to address this issue in future releases.
+
+.SH AUTHOR
+Collin Ballard
